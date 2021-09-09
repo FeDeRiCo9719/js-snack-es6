@@ -47,6 +47,7 @@ const Teams = [
     }
 ];
 
+console.log (Teams);
 
 // 2. Generare numeri random al posto degli 0 nelle proprietà: goal fatti e goal subiti.
 for ( let i=0; i < Teams.length; i++ ) {
@@ -54,11 +55,24 @@ for ( let i=0; i < Teams.length; i++ ) {
     Teams[i].goalFatti= numRandom(i, 5);
     Teams[i].goalSubiti= numRandom(0, 5);
 
-    console.log( "goal Fatti = " + Teams[i].goalFatti );
-    console.log( "goal Subiti = " + Teams[i].goalSubiti );
-    console.log("");
+    console.log( `goal Fatti ${Teams[i].goalFatti}` );
+    console.log( `goal Subiti ${Teams[i].goalSubiti}` );
+    console.log('');
 }
 
 
 // 3. Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e goal subiti e stampiamo tutto in console.
+// const [ {nome, goalSubiti}, {}, {}, {} ] = Teams;
+// console.log (nome, goalSubiti);
+
+const NewArray = [];
+
+for ( let i=0; i < Teams.length; i++ ) {
+
+    NewArray.push( Teams[i].nome );
+    NewArray.push( Teams[i].goalSubiti );
+
+}
+
+console.log (NewArray);
 
