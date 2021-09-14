@@ -6,17 +6,17 @@ Usiamo i nuovi metodi degli array foreach o filter.
 */
 
 // Scrivere una funzione che accetti tre argomenti, un array e due numeri (a più piccolo di b)
-// function myFunction( arr, num1, num2 ) {
+function myFunction( arr, num1, num2 ) {
 
-//     const Array = [];
+    const Array = [];
 
-//     arr.forEach( function (item,index) {
-//         if (index > num1 && index < num2) {
-//             Array.push(item);
-//         }
-//     });
-//     return Array;
-// }
+    arr.forEach( function (item,index) {
+        if (index > num1 && index < num2) {
+            Array.push(item);
+        }
+    });
+    return Array;
+}
 
 // function myFunction_2( arr, num1, num2 ) {
 
@@ -33,13 +33,13 @@ Usiamo i nuovi metodi degli array foreach o filter.
 //     return Array;
 // }
 
-const myFunction_3 = ( arr, num1, num2 ) => {
-    return arr.filter(
-        (item,index) => {
+// const myFunction_3 = ( arr, num1, num2 ) => {
+//     return arr.filter(
+//         (item,index) => {
             
-        }
-    );
-}
+//         }
+//     );
+// }
 
 /*
 programma
@@ -47,12 +47,10 @@ programma
 
 // 1. input 
 let Number_A = 4;
-let Number_B = 118;
+let Number_B = 9;
 const array1 = ['a', 'b', 'c','d', 'e', 'f','g', 'h', 'i', 'l'];
 
 // // 2. Usiamo i nuovi metodi degli array foreach o filter
-console.log( myFunction(array1, Number_A, Number_B ) );
-
 const NewArray = myFunction(array1, Number_A, Number_B );
 console.log(NewArray);
 
